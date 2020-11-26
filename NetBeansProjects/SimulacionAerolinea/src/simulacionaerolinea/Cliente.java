@@ -13,6 +13,10 @@ public class Cliente {
     private int llegada;
     private int horaAtencion;
 
+    public Cliente() {
+    }
+
+    
     public Cliente(int llegada, int horaAtencion) {
         setLlegada(llegada);
         setHoraAtencion(horaAtencion);

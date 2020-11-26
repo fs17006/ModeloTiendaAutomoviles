@@ -1,34 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package simulacionaerolinea;
+
 import java.util.concurrent.ThreadLocalRandom;
-/**
- *
- * @author fer
- */
+
 public class Prueba {
     
     public static void main(String[] args){
-        public static int may(int x){
-            int auxMayor=0;
-            if(x>auxMayor){
-                auxMayor=x;
-            }
-           return auxMayor; 
-        }
-        
-        public static int min(int x){
-            int auxMenor=10000;
-            if(x<auxMenor){
-                auxMenor=x;
-            }
-            return auxMenor;
-        }
-        
-        for(int j=0;j<6000000;j++){
+           for(int j=0;j<6000000;j++){
             int mayor=0,menor=0;
             ColaAtencion atencion=new ColaAtencion();
             System.out.println("--------");
@@ -59,10 +37,12 @@ public class Prueba {
                 System.out.println("\nCliente atendido");
                 atencion.desencolar();
                 if(atencion.longitud()<=5){
-                    System.out.println("La cola es:"+atencion.longitud());
+                    System.out.println("\nLa cola es:"+atencion.longitud());
                     System.out.println("\ncola larga se atendera a los clientes.:");
                     for(int i=0;i<atencion.longitud();i++){
+                        System.out.println("Cliente:"+atencion.cabecera());
                         atencion.desencolar();
+                        
                     }
                 }
                }else if(atender==2){
@@ -75,7 +55,22 @@ public class Prueba {
                 
         }
          
-      }
     }
     
-
+         public static int may(int x){
+           int auxMayor=0;
+            if(x>auxMayor){
+                auxMayor=x;
+            }
+           return auxMayor; 
+        }
+       
+        
+        public static int min(int x){
+            int auxMenor=10000;
+            if(x<auxMenor){
+                auxMenor=x;
+            }
+            return auxMenor;
+        }
+}
